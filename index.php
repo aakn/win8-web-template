@@ -5,4 +5,6 @@
  	$result = pg_query($db, $query);
  	print_r($result);
  	echo $result;
+ 	echo "Done";
+ 	
 ?>
