@@ -1,24 +1,16 @@
  <?php
- 	/*
- 	include('config.ini');
+ 	
+ 	include('config.ini.php');
  	$query = "SELECT employee_id, last_name, first_name, title "
  		."FROM employees ORDER BY last_name ASC, first_name ASC";
  	$result = pg_query($db, $query);
  	print_r($result);
  	echo $result;
  	echo "Done";
- 	*/
+ 	
 ?>
 <?php
-	$dsn = "pgsql:"
-	    . "host=ec2-54-243-235-100.compute-1.amazonaws.com;"
-	    . "dbname=de6tvs4ke4h1nt;"
-	    . "user=uvscftzkhczzoz;"
-	    . "port=5432;"
-	    . "sslmode=require;"
-	    . "password=qbMzLTEWpn-aU8kCFGh2UDSrdQ";
-
-	$db = new PDO($dsn);
+	include_once("connection.ini");
 ?>
 <html>
  <head>
