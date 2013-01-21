@@ -1,3 +1,4 @@
-<?php
-	echo "hello world";
+ <?php
+ 	include('config.ini');
+ 	echo "hello world";
 ?>
