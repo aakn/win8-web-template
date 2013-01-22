@@ -39,7 +39,7 @@
 							<li><a href="index.php">View</a></li>
 						</ul>
 						<ul class="nav">
-							<li class="active"><a href="#">Insert</a></li>
+							<li class="active"><a href="insert.php">Insert</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
