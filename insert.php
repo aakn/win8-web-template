@@ -92,7 +92,7 @@
 												<div class="control-group">
 													<label class="control-label" <?php echo "for = '".$fieldName."'"; ?> ><?php echo $fieldName; ?></label>
 													<div class="controls">
-														<input type="text" class="input-xlarge" <?php echo "id = '".$fieldName."'"; ?> >
+														<input type="text" class="input-xlarge" <?php echo "id = '".$fieldName."' name = '".$fieldName."'"; ?> >
 													</div>
 												</div>
 										<?php
