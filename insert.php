@@ -84,7 +84,7 @@
 										<?php
 											include_once('config.ini');
 											$result = pg_query($db, "select * from employees limit 1");
-											$i = 0;
+											$i = 1;
 											while($i < pg_num_fields($result)) 
 											{
 												$fieldName = pg_field_name($result, $i);
