@@ -22,7 +22,7 @@
 
 	$query = "INSERT INTO employees (".implode(", ",$field_name_row).") VALUES ('".implode("', '",$field_value_row)."');";
 	echo $query ."<br/>";
-	pg_query = ($db, $query);
+	//pg_query = ($db, $query);
 	//echo $_POST["last_name"]."<br/>".$_POST["first_name"]."<br/>".$_POST["title"];
 	echo "inserted successfully";
 ?>
