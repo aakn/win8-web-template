@@ -28,7 +28,7 @@
 	// $field_value_row = array($_POST["last_name"],$_POST["first_name"],$_POST["title"]);
 
 	//$query = "INSERT INTO employees (".implode(", ",$field_name_row).") VALUES ('".implode("', '",$field_value_row)."');";
-	$query = "INSERT INTO employees (last_name, first_name, title) VALUES('Asgar', 'Ali', 'Intern');";
+	$query = "INSERT INTO employees (employee_id, last_name, first_name, title) VALUES(7, 'Asgar', 'Ali', 'Intern');";
 	echo $query ."<br/>";
 	pg_query = ($db, $query);
 	//echo $_POST["last_name"]."<br/>".$_POST["first_name"]."<br/>".$_POST["title"];
