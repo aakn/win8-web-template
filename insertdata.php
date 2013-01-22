@@ -72,7 +72,7 @@
 							<div class="span7 offset1 well">
 								<p class="text-success">
 								<?php
-									if($_POST["submit"]) {
+									
 										include_once('config.ini');
 										$result = pg_query($db, "select * from employees limit 1");
 										$i = 1;
@@ -94,8 +94,8 @@
 
 										$result = pg_query($db, $query);
 
-										echo "inserted successfully";
-									}
+										echo "Inserted Successfully";
+									
 								?>
 								</p>
 							</div>
