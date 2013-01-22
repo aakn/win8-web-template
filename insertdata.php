@@ -15,12 +15,13 @@
 		}
 		$i++;
 	}
+	echo implode(",",$field_name_row)."<br/>";
+	echo implode(",",$field_value_row)."<br/>";
+	// $field_name_row = array("last_name","first_name","title");
+	// $field_value_row = array($_POST["last_name"],$_POST["first_name"],$_POST["title"]);
 
-	$field_name_row = array("last_name","first_name","title");
-	$field_value_row = array($_POST["last_name"],$_POST["first_name"],$_POST["title"]);
-
-	$query = "insert into employees (".implode(",",$field_name_row).") values (".implode(",",$field_value_row).")";
-	pg_query = ($db, $query);
+	// $query = "insert into employees (".implode(",",$field_name_row).") values (".implode(",",$field_value_row).")";
+	// pg_query = ($db, $query);
 	//echo $_POST["last_name"]."<br/>".$_POST["first_name"]."<br/>".$_POST["title"];
 	echo "inserted successfully";
 ?>
