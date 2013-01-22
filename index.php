@@ -76,7 +76,7 @@
 						</div>
 						 <?php
 							include_once('config.ini');
-							$query = "SELECT * from employees";
+							$query = "SELECT * from template";
 
 							$result = pg_query($db, $query);
 						?>

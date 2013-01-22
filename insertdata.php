@@ -75,7 +75,7 @@
 									<?php
 									
 										include_once('config.ini');
-										$result = pg_query($db, "select * from employees limit 1");
+										$result = pg_query($db, "select * from template limit 1");
 										$i = 1;
 										$field_name_row = array();
 										$field_value_row = array();
@@ -91,7 +91,7 @@
 											$i++;
 										}
 
-										$query = "INSERT INTO employees (".implode(", ",$field_name_row).") VALUES ('".implode("', '",$field_value_row)."');";
+										$query = "INSERT INTO template (".implode(", ",$field_name_row).") VALUES ('".implode("', '",$field_value_row)."');";
 
 										$result = pg_query($db, $query);
 
