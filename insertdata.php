@@ -21,5 +21,6 @@
 
 	// $query = "insert into employees (".implode(",",$field_name_row).") values (".implode(",",$field_value_row).")";
 	// pg_query = ($db, $query);
+	echo $_POST["last_name"]."<br/>".$_POST["first_name"]."<br/>".$_POST["title"];
 	echo "inserted successfully";
 ?>
