@@ -49,12 +49,7 @@
 		<div class = "row" style = "margin-top:1em;">
 		</div>
 
-
-
-
-		<div class="container">
-		 
-			
+		<div class="container"> 
 			<header class="jumbotron subhead" id="overview">
 				<div class="row-fluid">
 					<div class="span6 page-header">
@@ -62,7 +57,6 @@
 							Template
 							<small>Insert Page</small>
 						</h1>
-						
 					</div>
 				</div>
 			</header>
