@@ -36,17 +36,15 @@
 					</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
+							<li><a href="index.php">View</a></li>
+						</ul>
+						<ul class="nav">
 							<li class="active"><a href="#">Insert</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
 			</div>
 		</div>
-		<!--
-		<header class="jumbotron subhead" id="overview">
-			<img src = "images/banner1.png"/>
-		</header>
-	-->
 		<hr>
 		<div class = "row" style = "margin-top:1em;">
 		</div>
