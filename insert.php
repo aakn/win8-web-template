@@ -100,7 +100,7 @@
 										?>
 										
 										 <div class="form-actions">
-											<button id="submit" type="submit" class="btn btn-primary">Insert</button>
+											<button id="submit" name="submit" type="submit" class="btn btn-primary">Insert</button>
 											<button type="reset" class="btn">Cancel</button>
 										</div>
 									</fieldset>
