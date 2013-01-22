@@ -31,7 +31,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
-					<a class="brand" href="#" style="padding:9px;">
+					<a class="brand" href="#">
 						Template
 					</a>
 					<div class="nav-collapse collapse">
