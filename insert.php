@@ -76,7 +76,7 @@
 						</div>
 						<div class="row">
 							<div class="span7 offset1">
-								<form class="form-horizontal well" method="post" action="insert-data.php">
+								<form class="form-horizontal well" method="post" action="insertdata.php">
 									<fieldset>
 										<legend>Fill this form</legend>
 										<?php
