@@ -69,9 +69,10 @@
 							<h2>Insert</h2>
 						</div>
 						<div class="row">
-							<div class="span7 offset1 well">
-								<p class="text-success">
-								<?php
+							<div class="span7 offset1">
+								<div class="alert alert-success">
+									<a class="close">&times;</a>
+									<?php
 									
 										include_once('config.ini');
 										$result = pg_query($db, "select * from employees limit 1");
@@ -96,8 +97,8 @@
 
 										echo "Inserted Successfully";
 									
-								?>
-								</p>
+									?>
+								</div>
 							</div>
 						</div>
 					</section>
