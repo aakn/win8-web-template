@@ -88,6 +88,7 @@
 											while($i < pg_num_fields($result)) 
 											{
 												$fieldName = pg_field_name($result, $i);
+												$i++;
 
 										?>
 												<div class="control-group">
