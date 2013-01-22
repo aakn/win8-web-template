@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Insert &middot; Template</title>
+		<title>View &middot; Template</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Insert">
+		<meta name="description" content="Select page">
 		<meta name="author" content="Ali">
 
 		<!-- Le styles -->
@@ -39,7 +39,7 @@
 							<li class="active"><a href="#">View</a></li>
 						</ul>
 						<ul class="nav">
-							<li><a href="inser.php">Insert</a></li>
+							<li><a href="insert.php">Insert</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -60,7 +60,7 @@
 					<div class="span6 page-header">
 						<h1>
 							Template
-							<small>Insert Page</small>
+							<small>View Page</small>
 						</h1>
 						
 					</div>
