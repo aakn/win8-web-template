@@ -113,8 +113,7 @@
 										?>
 										
 										<td>
-											<button class="btn btn-inverse edit-btn" <?php echo "id='$id'" ?> >Edit</button>
-											<button class="btn btn-danger delete-btn" <?php echo "id='$id'" ?> >Delete</button>
+											<button class="btn btn-danger delete-btn" data-toggle="modal" href="#edit-modal" <?php echo "id='$id'" ?> >Delete</button>
 										</td>
 										<?php
 										echo "</tr>";
