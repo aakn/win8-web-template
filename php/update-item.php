@@ -17,13 +17,12 @@
 		if($value) {
 			$field_name_row[] = $fieldName;
 			$field_value_row[] = $value;
-			$item = $fieldName + " = '" + $value + "'";
+			$item = $fieldName . " = '" . $value . "'";
 			$pairs[] = $item;
-			echo "$item\n";
+			//echo "$item\n";
 		}
 		$i++;
 
-		echo "I: $i\n";
 	}
 	
 	//$query = "INSERT INTO template (".implode(", ",$field_name_row).") VALUES ('".implode("', '",$field_value_row)."');";
