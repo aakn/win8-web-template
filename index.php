@@ -19,6 +19,7 @@
 		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js'></script>
 		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js'></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/modify.js"></script>
 	</head>
 
 	<body>
@@ -108,8 +109,8 @@
 										// echo "<td>" . htmlspecialchars($row["title"]) . "</td>";
 										?>
 										<td>
-											<button class="btn btn-inverse" <?php echo "id='$i'" ?> >Edit</button>
-											<button class="btn btn-danger" <?php echo "id='$i'" ?> >Delete</button>
+											<button class="btn btn-inverse edit-btn" <?php echo "id='$i'" ?> >Edit</button>
+											<button class="btn btn-danger delete-btn" <?php echo "id='$i'" ?> >Delete</button>
 										</td>
 										<?php
 										echo "</tr>";
