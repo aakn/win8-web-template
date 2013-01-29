@@ -21,11 +21,11 @@
 		}
 		$i++;
 	}
-
+	echo json_encode($pairs)."\n";
 	//$query = "INSERT INTO template (".implode(", ",$field_name_row).") VALUES ('".implode("', '",$field_value_row)."');";
 
 	//FIX THE QUERY
-	$query = "UPDATE template SET (".implode(", ",$pairs).") VALUES ('".implode("', '",$field_value_row)."') where id=$id;";
+	$query = "UPDATE template SET (".implode(", ",$pairs).") where id=$id;";
 
 	$result = pg_query($db, $query);
 
