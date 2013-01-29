@@ -127,7 +127,7 @@
 			</div>
 		</div>
 		<!-- Modal -->
-		<div id="edit-modal" class="modal hide fade">
+		<div id="edit-modal" class="modal hide fade" tabindex="-1" data-width="760">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 				<h3>Edit Data</h3>
