@@ -107,10 +107,10 @@
 										// echo "<td>" . htmlspecialchars($row["first_name"]) . "</td>";
 										// echo "<td>" . htmlspecialchars($row["title"]) . "</td>";
 										?>
-
-										<button class="btn btn-inverse" <?php echo "id='$i'" ?> >Edit</button>
-										<button class="btn btn-danger" <?php echo "id='$i'" ?> >Delete</button>
-
+										<td>
+											<button class="btn btn-inverse" <?php echo "id='$i'" ?> >Edit</button>
+											<button class="btn btn-danger" <?php echo "id='$i'" ?> >Delete</button>
+										</td>
 										<?php
 										echo "</tr>";
 									}
