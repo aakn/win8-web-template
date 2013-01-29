@@ -107,7 +107,7 @@
 										// echo "<td>" . htmlspecialchars($row["last_name"]) . "</td>";
 										// echo "<td>" . htmlspecialchars($row["first_name"]) . "</td>";
 										// echo "<td>" . htmlspecialchars($row["title"]) . "</td>";
-										$id = $row["id"];
+										$id = $row[0];
 										?>
 										
 										<td>
