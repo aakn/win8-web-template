@@ -133,8 +133,25 @@
 				<h3>Edit Data</h3>
 			</div>
 			<div class="modal-body">
-				<p id="note-content">
-				</p>
+				<?php
+					include_once('config.ini');
+					$result = pg_query($db, "select * from template limit 1");
+					$i = 1;
+					while($i < pg_num_fields($result)) 
+					{
+						$fieldName = pg_field_name($result, $i);
+						$i++;
+
+				?>
+						<div class="control-group">
+							<label class="control-label" <?php echo "for = '".$fieldName."'"; ?> ><?php echo $fieldName; ?></label>
+							<div class="controls">
+								<input type="text" class="input-xlarge" <?php echo "id = '".$fieldName."' name = '".$fieldName."'"; ?> >
+							</div>
+						</div>
+				<?php
+					}
+				?>
 			</div>
 			<div class="modal-footer">
 				<button class="btn" data-dismiss="modal">Close</button>
