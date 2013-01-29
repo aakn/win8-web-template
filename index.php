@@ -156,7 +156,7 @@
 			<div class="modal-footer">
 				<div class="modal-footer">
 					<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-					<button class="btn btn-primary">Save changes</button>
+					<button class="btn btn-primary" id="save-changes-btn">Save changes</button>
 			</div>
 		</div>
 		

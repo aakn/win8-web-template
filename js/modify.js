@@ -1,4 +1,7 @@
 $(function() {
+
+	var result;
+
 	$(".edit-btn").click(function() {
 		var id = this.id;
 		$.post("../php/get-item.php",
@@ -7,12 +10,12 @@ $(function() {
 		},
 		function(data,status) {
 			//console.log(data);
-			var result = JSON.parse(data); 
+			result = JSON.parse(data); 
 			console.log(result);
 
 			$.each(result, function(key,value) {
 				$("#"+key).val(value);
-				console.log(key+" "+value);
+				//console.log(key+" "+value);
 			});
 		});
 
@@ -31,5 +34,14 @@ $(function() {
 
 			}
 		});
+	});
+	$("#save-changes-btn").click(function () {
+		var items = new Array();
+		var i=0;
+		$.each(result, function(key,value) {
+			items[i++] = $("#"+key).val();
+			//console.log(key+" "+value);
+		});
+		console.log(items);
 	});
 });
