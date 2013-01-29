@@ -1,6 +1,6 @@
 <?php
 
-	include_once('config.ini');
+	include_once('../config.ini');
 	$id = $_POST["id"];
 
 	$result = pg_query($db, "select * from template limit 1");
