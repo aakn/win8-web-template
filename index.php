@@ -73,6 +73,8 @@
 			<div class = "row-fluid">
 				<div class="span12">
 
+					<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+
 					<section>
 						<div class="page-header">
 							<h2>View</h2>
@@ -156,6 +158,21 @@
 			<div class="modal-footer">
 				<button class="btn" data-dismiss="modal">Close</button>
 			</div>
+		</div>
+
+		<!-- Modal -->
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		    <h3 id="myModalLabel">Modal header</h3>
+		  </div>
+		  <div class="modal-body">
+		    <p>One fine body…</p>
+		  </div>
+		  <div class="modal-footer">
+		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		    <button class="btn btn-primary">Save changes</button>
+		  </div>
 		</div>
 		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js'></script>
 		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js'></script>
