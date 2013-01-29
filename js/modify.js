@@ -1,10 +1,15 @@
 $(function() {
 	$(".edit-btn").click(function() {
-		console.log(this);
-		console.log(this.id);
+		var id = this.id;
 	});
 	$(".delete-btn").click(function() {
-		console.log(this);
-		console.log(this.id);
+		var id = this.id;
+		$.post("../php/delete.php",
+		{ 
+			id : id
+		},
+		function(data,status) {
+			console.log(data);
+		});
 	});
 });

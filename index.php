@@ -108,9 +108,10 @@
 										// echo "<td>" . htmlspecialchars($row["first_name"]) . "</td>";
 										// echo "<td>" . htmlspecialchars($row["title"]) . "</td>";
 										?>
+										$id = $row["id"];
 										<td>
-											<button class="btn btn-inverse edit-btn" <?php echo "id='$i'" ?> >Edit</button>
-											<button class="btn btn-danger delete-btn" <?php echo "id='$i'" ?> >Delete</button>
+											<button class="btn btn-inverse edit-btn" <?php echo "id='$id'" ?> >Edit</button>
+											<button class="btn btn-danger delete-btn" <?php echo "id='$id'" ?> >Delete</button>
 										</td>
 										<?php
 										echo "</tr>";
