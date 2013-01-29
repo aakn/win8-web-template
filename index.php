@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -88,14 +88,16 @@
 										while ($i < pg_num_fields($result))
 										{
 											$fieldName = pg_field_name($result, $i);
-											echo '<td>' . $fieldName . '</td>';
+											echo '<th>' . $fieldName . '</th>';
 											$i++;
 										}
 									?>
+									<th>Options</th>
 								</tr>
 							</thead>
 							<tbody>
 								<?php
+									$i=0;
 									while($row = pg_fetch_row($result)) {
 										echo "<tr>";
 										foreach ($row as $item) {
@@ -104,6 +106,12 @@
 										// echo "<td>" . htmlspecialchars($row["last_name"]) . "</td>";
 										// echo "<td>" . htmlspecialchars($row["first_name"]) . "</td>";
 										// echo "<td>" . htmlspecialchars($row["title"]) . "</td>";
+										?>
+
+										<button class="btn btn-inverse" <?php echo "id='$i'" ?> >Edit</button>
+										<button class="btn btn-danger" <?php echo "id='$i'" ?> >Delete</button>
+
+										<?php
 										echo "</tr>";
 									}
 								?>
