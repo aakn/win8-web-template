@@ -5,6 +5,6 @@
 
 	$result = pg_query($db, $query);
 	$rows = array();
-	$rows[] = pg_fetch_assoc($result);
-	echo json_encode($rows);
+	$row = pg_fetch_assoc($result);
+	echo json_encode($row);
 ?>
