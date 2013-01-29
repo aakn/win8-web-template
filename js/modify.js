@@ -1,7 +1,24 @@
 $(function() {
 	$(".edit-btn").click(function() {
 		var id = this.id;
-		$("#responsive").modal();
+		var tmpl = [
+		// tabindex is required for focus
+		'<div class="modal hide fade" tabindex="-1">',
+			'<div class="modal-header">',
+				'<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>',
+				'<h3>Modal header</h3>', 
+			'</div>',
+			'<div class="modal-body">',
+				'<p>Test</p>',
+			'</div>',
+			'<div class="modal-footer">',
+				'<a href="#" data-dismiss="modal" class="btn">Close</a>',
+				'<a href="#" class="btn btn-primary">Save changes</a>',
+			'</div>',
+		'</div>'
+		].join('');
+
+		$(tmpl).modal();
 	});
 	$(".delete-btn").click(function() {
 		var id = this.id;
