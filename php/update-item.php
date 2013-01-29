@@ -17,10 +17,15 @@
 		if($value) {
 			$field_name_row[] = $fieldName;
 			$field_value_row[] = $value;
-			$pairs[] = $fieldName + " = '" + $value + "'";
+			$item = $fieldName + " = '" + $value + "'";
+			$pairs[] = $item;
+			echo "$item\n";
 		}
 		$i++;
+
+		echo "I: $i\n";
 	}
+	echo "I: $i\n";
 	echo json_encode($pairs)."\n";
 	echo json_encode($_POST)."\n";
 	//$query = "INSERT INTO template (".implode(", ",$field_name_row).") VALUES ('".implode("', '",$field_value_row)."');";
