@@ -3,7 +3,7 @@ $(function() {
 		var id = this.id;
 		
 
-		//$('#edit-modal').modal();
+		$('#edit-modal').modal();
 	});
 	$(".delete-btn").click(function() {
 		var id = this.id;
