@@ -6,9 +6,14 @@ $(function() {
 			itemid : id
 		},
 		function(data,status) {
-			console.log(data);
-			var json = JSON.parse(data); 
-			console.log(json);
+			//console.log(data);
+			var result = JSON.parse(data); 
+			console.log(result);
+
+			$.each(result, function(key,value) {
+				$("#"+key).val(value);
+				console.log(key+" "+value);
+			});
 		});
 
 		//$('#edit-modal').modal();
