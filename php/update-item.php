@@ -25,10 +25,7 @@
 
 		echo "I: $i\n";
 	}
-	$i= pg_num_fields($result)
-	echo "num of fields: $i\n";
-	echo json_encode($pairs)."\n";
-	echo json_encode($_POST)."\n";
+	
 	//$query = "INSERT INTO template (".implode(", ",$field_name_row).") VALUES ('".implode("', '",$field_value_row)."');";
 
 	//FIX THE QUERY
