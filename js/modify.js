@@ -46,8 +46,9 @@ $(function() {
 
 		$.post("../php/update-item.php", items,
 		function(data,status) {
+			$("#edit-modal").modal('hide');
 			console.log(data);
-			$("#edit-modal").modal('hide');	
+				
 		});
 
 
