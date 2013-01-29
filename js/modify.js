@@ -42,14 +42,12 @@ $(function() {
 			items[key] = $("#"+key).val();
 			//console.log(key+" "+value);
 		});
-		console.log(items);
+		//console.log(items);
 
 		$.post("../php/update-item.php", items,
 		function(data,status) {
-			//console.log(data);
-			if(data=="done") {
-
-			}
+			console.log(data);
+			
 		});
 
 	});
