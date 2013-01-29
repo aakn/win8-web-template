@@ -79,7 +79,7 @@
 						</div>
 						 <?php
 							include_once('config.ini');
-							$query = "SELECT * from template";
+							$query = "SELECT * from template ORDER BY id ASC";
 
 							$result = pg_query($db, $query);
 						?>
