@@ -1,7 +1,7 @@
 $(function() {
 	$(".edit-btn").click(function() {
 		var id = this.id;
-		$('body').modalmanager("loading");
+		$('body').modalmanager("#responsive");
 	});
 	$(".delete-btn").click(function() {
 		var id = this.id;
