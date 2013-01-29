@@ -20,6 +20,8 @@
 		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js'></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/modify.js"></script>
+		<script src="js/bootstrap-modal.js"></script>
+		<script src="js/bootstrap-modalmanager.js"></script>
 	</head>
 
 	<body>
@@ -159,5 +161,11 @@
 		    <button type="button" class="btn btn-primary">Save changes</button>
 		  </div>
 		</div>
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js'></script>
+		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js'></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/modify.js"></script>
+		<script src="js/bootstrap-modal.js"></script>
+		<script src="js/bootstrap-modalmanager.js"></script> 
 	</body>
 </html>
