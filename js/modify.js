@@ -36,12 +36,21 @@ $(function() {
 		});
 	});
 	$("#save-changes-btn").click(function () {
-		var items = new Array();
+		var items = new Object();
 		var i=0;
 		$.each(result, function(key,value) {
-			items[i++] = $("#"+key).val();
+			items[key] = $("#"+key).val();
 			//console.log(key+" "+value);
 		});
 		console.log(items);
+
+		$.post("../php/update-item.php", items,
+		function(data,status) {
+			//console.log(data);
+			if(data=="done") {
+
+			}
+		});
+
 	});
 });
