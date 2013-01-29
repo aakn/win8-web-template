@@ -6,7 +6,7 @@ $(function() {
 		var id = this.id;
 		$.post("../php/delete.php",
 		{ 
-			id : id
+			itemid : id
 		},
 		function(data,status) {
 			console.log(data);
