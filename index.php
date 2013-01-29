@@ -71,7 +71,7 @@
 			<div class = "row-fluid">
 				<div class="span12">
 
-					<a href="#responsive" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+					<!-- <a href="#responsive" role="button" class="btn" data-toggle="modal">Launch demo modal</a> -->
 
 					<section>
 						<div class="page-header">
