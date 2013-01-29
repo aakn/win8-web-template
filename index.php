@@ -126,40 +126,19 @@
 				</div>
 			</div>
 		</div>
-		<!-- Modal Definitions (tabbed over for <pre>) -->
-		<div id="responsive" class="modal hide fade" tabindex="-1" data-width="760">
-		  <div class="modal-header">
-		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		    <h3>Responsive</h3>
-		  </div>
-		  <div class="modal-body">
-		    <div class="row-fluid">
-		      <div class="span6">
-		        <h4>Some Input</h4>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		      </div>
-		      <div class="span6">
-		        <h4>Some More Input</h4>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		        <p><input type="text" class="span12" /></p>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="modal-footer">
-		    <button type="button" data-dismiss="modal" class="btn">Close</button>
-		    <button type="button" class="btn btn-primary">Save changes</button>
-		  </div>
+		<!-- Modal -->
+		<div id="edit-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3>Edit Data</h3>
+			</div>
+			<div class="modal-body">
+				<p id="note-content">
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal">Close</button>
+			</div>
 		</div>
 		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js'></script>
 		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js'></script>
