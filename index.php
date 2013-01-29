@@ -133,6 +133,7 @@
 				<h3>Edit Data</h3>
 			</div>
 			<div class="modal-body">
+				<input class="hide" id="id"/>
 				<?php
 					include_once('config.ini');
 					$result = pg_query($db, "select * from template limit 1");
