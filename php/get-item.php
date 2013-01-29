@@ -4,6 +4,6 @@
 	$query = "SELECT * from template where id=$id";
 
 	$result = pg_query($db, $query);
-	$row = pg_fetch_row($result)
+	$row = pg_fetch_assoc($result)
 	echo json_encode($row);
 ?>
