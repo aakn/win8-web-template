@@ -111,7 +111,7 @@
 										?>
 										
 										<td>
-											<button class="btn btn-inverse edit-btn" <?php echo "id='$id'" ?> >Edit</button>
+											<button class="btn btn-inverse edit-btn" data-toggle="modal" href="#responsive" <?php echo "id='$id'" ?> >Edit</button>
 											<button class="btn btn-danger delete-btn" <?php echo "id='$id'" ?> >Delete</button>
 										</td>
 										<?php
@@ -123,6 +123,41 @@
 					</section>
 				</div>
 			</div>
+		</div>
+		<!-- Modal Definitions (tabbed over for <pre>) -->
+		<div id="responsive" class="modal hide fade" tabindex="-1" data-width="760">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Responsive</h3>
+		  </div>
+		  <div class="modal-body">
+		    <div class="row-fluid">
+		      <div class="span6">
+		        <h4>Some Input</h4>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		      </div>
+		      <div class="span6">
+		        <h4>Some More Input</h4>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="modal-footer">
+		    <button type="button" data-dismiss="modal" class="btn">Close</button>
+		    <button type="button" class="btn btn-primary">Save changes</button>
+		  </div>
 		</div>
 	</body>
 </html>

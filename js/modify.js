@@ -10,7 +10,10 @@ $(function() {
 			itemid : id
 		},
 		function(data,status) {
-			console.log(data);
+			//console.log(data);
+			if(data=="done") {
+				
+			}
 		});
 	});
 });
