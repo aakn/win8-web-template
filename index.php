@@ -20,8 +20,6 @@
 		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js'></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/modify.js"></script>
-		<script src="js/bootstrap-modal.js"></script>
-		<script src="js/bootstrap-modalmanager.js"></script>
 	</head>
 
 	<body>
@@ -73,8 +71,6 @@
 			<div class = "row-fluid">
 				<div class="span12">
 
-					<a href="#responsive" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
-
 					<section>
 						<div class="page-header">
 							<h2>View</h2>
@@ -115,7 +111,7 @@
 										?>
 										
 										<td>
-											<button class="btn btn-inverse edit-btn" data-toggle="modal" href="#edit-modal" <?php echo "id='$id'" ?> >Edit</button>
+											<button class="btn btn-inverse edit-btn" data-toggle="modal" href="#responsive"<?php echo "id='$id'" ?> >Edit</button>
 											<button class="btn btn-danger delete-btn" <?php echo "id='$id'" ?> >Delete</button>
 										</td>
 										<?php
@@ -128,92 +124,40 @@
 				</div>
 			</div>
 		</div>
-		<!-- Modal -->
-		<div id="edit-modal" class="modal hide fade" tabindex="-1" data-width="760">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				<h3>Edit Data</h3>
-			</div>
-			<div class="modal-body">
-				<?php
-					include_once('config.ini');
-					$result = pg_query($db, "select * from template limit 1");
-					$i = 1;
-					while($i < pg_num_fields($result)) 
-					{
-						$fieldName = pg_field_name($result, $i);
-						$i++;
-
-				?>
-						<div class="control-group">
-							<label class="control-label" <?php echo "for = '".$fieldName."'"; ?> ><?php echo $fieldName; ?></label>
-							<div class="controls">
-								<input type="text" class="input-xlarge" <?php echo "id = '".$fieldName."' name = '".$fieldName."'"; ?> >
-							</div>
-						</div>
-				<?php
-					}
-				?>
-			</div>
-			<div class="modal-footer">
-				<button class="btn" data-dismiss="modal">Close</button>
-			</div>
-		</div>
-
-		<!-- Modal -->
-		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<!-- Modal Definitions (tabbed over for <pre>) -->
+		<div id="responsive" class="modal hide fade" tabindex="-1" data-width="760">
 		  <div class="modal-header">
-		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-		    <h3 id="myModalLabel">Modal header</h3>
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Responsive</h3>
 		  </div>
 		  <div class="modal-body">
-		    <p>One fine body…</p>
+		    <div class="row-fluid">
+		      <div class="span6">
+		        <h4>Some Input</h4>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		      </div>
+		      <div class="span6">
+		        <h4>Some More Input</h4>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		        <p><input type="text" class="span12" /></p>
+		      </div>
+		    </div>
 		  </div>
 		  <div class="modal-footer">
-		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		    <button class="btn btn-primary">Save changes</button>
+		    <button type="button" data-dismiss="modal" class="btn">Close</button>
+		    <button type="button" class="btn btn-primary">Save changes</button>
 		  </div>
 		</div>
-		<!-- Modal Definitions (tabbed over for <pre>) -->
-<div id="responsive" class="modal hide fade" tabindex="-1" data-width="760">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3>Responsive</h3>
-  </div>
-  <div class="modal-body">
-    <div class="row-fluid">
-      <div class="span6">
-        <h4>Some Input</h4>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-      </div>
-      <div class="span6">
-        <h4>Some More Input</h4>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-        <p><input type="text" class="span12" /></p>
-      </div>
-    </div>
-  </div>
-  <div class="modal-footer">
-    <button type="button" data-dismiss="modal" class="btn">Close</button>
-    <button type="button" class="btn btn-primary">Save changes</button>
-  </div>
-</div>
-		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js'></script>
-		<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js'></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/bootstrap-modal.js"></script>
-		<script src="js/bootstrap-modalmanager.js"></script> 
-		<script src="js/modify.js"></script>
 	</body>
 </html>
