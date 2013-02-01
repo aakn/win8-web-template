@@ -1,11 +1,11 @@
 <?php								
 	include_once('config.ini');
 	
-	$i=0;
+	$i=1;
 	$j=0;
 	$item3="This is a sample item";
 	$item4="This is a sample sample sample sample sample item";
-	while($i<10) {
+	//while($i<10) {
 		$item1 = "group$i";
 		while($j<10){
 			$item2="subitem$j";
@@ -16,7 +16,7 @@
 			$j++;
 		}
 		$i++;
-	}
+	//}
 	
 
 	echo "Inserted Successfully<br/>";
