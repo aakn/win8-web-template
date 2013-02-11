@@ -10,13 +10,14 @@
 
 		$image = $row["photo"];
 		$hey = json_encode($image);
+		$hey=stripslashes($hey);
 		echo "$hey";
 		$order   = array("\/");
 		$replace = "/";
 		//$image = str_replace($image,$order,$replace)
 
 		$row["photo"]=$image;
-		var_dump($image);
+		//var_dump($image);
 		//echo stripslashes($image);
 		//echo $image."<br/>";
 		echo "img src='$image'<br/>";
