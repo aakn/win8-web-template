@@ -10,14 +10,14 @@
 	}
 
 	if($page=="main"){
-		array_filter($rows,"mainpage");
+		$rows = array_filter($rows,"mainpage");
 	}
-	else
-		echo json_encode($rows);
+	
+	echo json_encode($rows);
 
 	function mainpage($var) {
 		//print_r($var);
-		print_r($var["itemid"]);
+		//print_r($var["itemid"]);
 		if($var["itemid"]==1) return true;
 		else return false;
 	}
