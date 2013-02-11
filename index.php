@@ -1,5 +1,6 @@
 <?php
 	$tname="ecom";
+	$column_to_skip=array("description");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,6 +95,9 @@
 										while ($i < pg_num_fields($result))
 										{
 											$fieldName = pg_field_name($result, $i);
+											if (in_array($fieldName, $column_to_skip)) {
+												    break;
+											}
 											echo '<th>' . $fieldName . '</th>';
 											$i++;
 										}
@@ -104,16 +108,18 @@
 							<tbody>
 								<?php
 									$i=0;
-									while($row = pg_fetch_row($result)) {
-										$id = $row[0];
+									while($row = pg_fetch_assoc($result)) {
+										$id = $row["id"];
 										echo "<tr id='rowid-$id'>";
-										foreach ($row as $item) {
+										foreach ($row as $fieldName => $item) {
+											if (in_array($fieldName, $column_to_skip)) {
+												    break;
+											}
 											echo "<td>" . $item . "</td>";
 										}
 										// echo "<td>" . htmlspecialchars($row["last_name"]) . "</td>";
 										// echo "<td>" . htmlspecialchars($row["first_name"]) . "</td>";
 										// echo "<td>" . htmlspecialchars($row["title"]) . "</td>";
-										$id = $row[0];
 										?>
 										
 										<td>
