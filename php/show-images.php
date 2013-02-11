@@ -12,17 +12,10 @@
 		$hey = json_encode($image);
 		$hey=stripslashes($hey);
 		$image = json_decode($hey);
-		//echo "$hey";
-		$order   = array("\/");
-		$replace = "/";
-		//$image = str_replace($image,$order,$replace)
+		echo "$hey";
+		echo "<img src='$image'/><br/>";
 
 		$row["photo"]=$image;
-		//var_dump($image);
-		//echo stripslashes($image);
-		//echo $image."<br/>";
-		//echo "img src='$image'<br/>";
-		echo "<img src='$image'/><br/>";
 		$rows[] = $row;
 	}
 	echo json_encode($rows);
