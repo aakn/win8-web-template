@@ -7,7 +7,7 @@
 	while($row = pg_fetch_assoc($result)) {
 		//$rows[] = $row;
 		$image = $row.photo;
-		echo "<img src='$image'/><br/>"
+		echo "<img src='$image'/><br/>";
 	}
 	//echo json_encode($rows);
 ?>
