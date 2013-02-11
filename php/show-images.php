@@ -9,10 +9,11 @@
 		// $row.photo = stripslashes($row.photo);
 
 		$image = $row["photo"];
-
+		$hey = json_encode($image);
+		echo "$hey";
 		$order   = array("\/");
 		$replace = "/";
-		$image = str_replace($image,$order,$replace)
+		//$image = str_replace($image,$order,$replace)
 
 		$row["photo"]=$image;
 		var_dump($image);
@@ -23,4 +24,5 @@
 		$rows[] = $row;
 	}
 	echo json_encode($rows);
+
 ?>
