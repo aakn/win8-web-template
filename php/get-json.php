@@ -27,7 +27,10 @@
 	function subcategory($var) {
 		$subcategory = $_GET["sub"];
 		$category = $_GET["cat"];
-		if($var["category"] == $category && $var["subcategory"] == $subcategory) {
+		$upperlimit = $_GET["ulimit"];
+		$lowerlimit = $_GET["llimit"];
+
+		if($var["category"] == $category && $var["subcategory"] == $subcategory && $var["itemid"] < $upperlimit && $var["itemid"] > $lowerlimit) {
 			return true;
 		} else
 			return false;
