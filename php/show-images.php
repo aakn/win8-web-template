@@ -9,9 +9,14 @@
 		// $row.photo = stripslashes($row.photo);
 
 		$image = $row.photo;
+
+		$order   = array("\/");
+		$replace = "/";
+		$image = str_replace($image,$order,$replace)
+
 		$row.photo=$image;
 		var_dump($image);
-		echo stripslashes($image);
+		//echo stripslashes($image);
 		//echo $image."<br/>";
 		echo "img src='$image'<br/>";
 		echo "<img src='$image'/><br/>";
