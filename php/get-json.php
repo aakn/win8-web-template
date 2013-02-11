@@ -30,7 +30,7 @@
 		$upperlimit = $_GET["ulimit"];
 		$lowerlimit = $_GET["llimit"];
 
-		if($var["category"] == $category && $var["subcategory"] == $subcategory && $var["itemid"] < $upperlimit && $var["itemid"] > $lowerlimit) {
+		if($var["category"] == $category && $var["subcategory"] == $subcategory && $var["itemid"] <= $upperlimit && $var["itemid"] >= $lowerlimit) {
 			return true;
 		} else
 			return false;
