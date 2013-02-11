@@ -82,7 +82,7 @@
 						</div>
 						 <?php
 							include_once('config.ini');
-							$query = "SELECT * from $tname ORDER BY id ASC";
+							$query = "SELECT * from $tname ORDER BY id ASC LIMIT 25";
 
 							$result = pg_query($db, $query);
 						?>
@@ -95,7 +95,7 @@
 										{
 											$fieldName = pg_field_name($result, $i);
 											if (in_array($fieldName, $column_to_skip)) {
-												    break;
+												    $i++; continue;
 											}
 											echo '<th>' . $fieldName . '</th>';
 											$i++;
@@ -112,7 +112,7 @@
 										echo "<tr id='rowid-$id'>";
 										foreach ($row as $fieldName => $item) {
 											if (in_array($fieldName, $column_to_skip)) {
-												    break;
+												    $i++; continue;
 											}
 											echo "<td>" . $item . "</td>";
 										}
