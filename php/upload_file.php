@@ -38,7 +38,7 @@ if (
   $query = "insert into photos (photo) values ('$base64')";
 
   $result = pg_query($query);
-  echo "Result of the query - $result";
+  echo "Result of the query :<br/>$query<br/>- $result";
   
     // if (file_exists("./upload/" . $_FILES["file"]["name"]))
     //   {
