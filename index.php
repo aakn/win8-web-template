@@ -1,5 +1,4 @@
 <?php
-	$tname="ecom";
 	$column_to_skip=array("description");
 ?>
 <!DOCTYPE html>
