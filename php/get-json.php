@@ -12,6 +12,9 @@
 	if($page=="main"){
 		$rows = array_filter($rows,"mainpage");
 	}
+	else if ($page="category") {
+		$rows = array_filter($rows,"subcategory");
+	}
 	
 	echo json_encode($rows);
 
@@ -20,5 +23,13 @@
 		//print_r($var["itemid"]);
 		if($var["itemid"]==1) return true;
 		else return false;
+	}
+	function subcategory($var) {
+		$subcategory = $_GET["sub"];
+		$category = $_GET["cat"];
+		if($var["category"] == $category && $var["subcategory"] == $subcategory) {
+			return true;
+		} else
+			return false;
 	}
 ?>
