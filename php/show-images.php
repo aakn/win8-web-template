@@ -8,6 +8,8 @@
 	while($row = pg_fetch_row($result)) {
 		$rows[] = $row;
 		$image = $row.photo;
+		var_dump($image);
+		echo $image."<br/>";
 		echo "img src='$image'<br/>";
 		echo "<img src='$image'/><br/>";
 	}
