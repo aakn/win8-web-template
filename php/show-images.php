@@ -11,6 +11,7 @@
 		$image = $row["photo"];
 		$hey = json_encode($image);
 		$hey=stripslashes($hey);
+		$image = json_decode($hey);
 		//echo "$hey";
 		$order   = array("\/");
 		$replace = "/";
