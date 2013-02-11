@@ -79,7 +79,7 @@
 						</div>
 						 <?php
 							include_once('config.ini');
-							$query = "SELECT * from $tname ORDER BY id ASC";
+							$query = "SELECT * from $tname ORDER BY id ASC LIMIT 50";
 
 							$result = pg_query($db, $query);
 						?>
