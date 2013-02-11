@@ -6,9 +6,10 @@
 	echo "number of rows: $num <br/>";
 	$rows=array();
 	while($row = pg_fetch_row($result)) {
-		//$rows[] = $row;
+		$rows[] = $row;
 		$image = $row.photo;
+		echo "img src='$image'<br/>";
 		echo "<img src='$image'/><br/>";
 	}
-	//echo json_encode($rows);
+	echo json_encode($rows);
 ?>
