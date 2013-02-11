@@ -17,6 +17,7 @@
 
 	function mainpage($var) {
 		print_r($var);
+		print_r($var["itemid"]);
 		if($var["itemid"]==1) return true;
 		else return false;
 	}
