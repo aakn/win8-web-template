@@ -6,7 +6,7 @@
 	$subcat_id=0;
 	$itemname="Item";
 	$price = "Price";
-	$description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eros dui, sollicitudin in pulvinar vulputate, ultrices volutpat elit. In pulvinar luctus tellus a placerat. Etiam non arcu dui. Aenean iaculis, turpis vitae egestas consectetur, dolor quam interdum tortor, cursus tempor augue ipsum id lacus. Mauris vel metus nunc. Proin mattis bibendum lectus in commodo. Duis posuere auctor nisi id tempor. Nulla in urna ligula. Phasellus dapibus, augue vitae tincidunt varius, dui magna faucibus libero, a congue sem dolor quis odio. Donec eu orci eros. Nullam ultricies nulla at libero bibendum sollicitudin. Mauris tincidunt sem non orci volutpat mollis. Nam tortor quam, vulputate id aliquam ullamcorper, mattis vel purus. Vestibulum quis mi ipsum.";
+	$description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta est id risus consequat in malesuada dui faucibus. Donec pretium lectus vitae magna elementum hendrerit. Nullam sit amet vestibulum urna.";
 	
 	$img = array("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY3B0cPoPAANMAcOba1BlAAAAAElFTkSuQmCC",
 		"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY7h4+cp/AAhpA3h+ANDKAAAAAElFTkSuQmCC",

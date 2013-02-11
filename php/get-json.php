@@ -1,7 +1,7 @@
 <?php
 	include_once('../config.ini');
 	$page = $_GET["page"];
-	$query = "SELECT * from $tname LIMIT 20";
+	$query = "SELECT * from $tname";
 
 	$result = pg_query($db, $query);
 	$rows=array();
