@@ -37,7 +37,7 @@ if (
   include_once('../config.ini');
   $query = "insert into photos (photo) values ('$base64')";
 
-  $result = pg_query($query);
+  $result = pg_query($db, $query);
   echo "Result of the query :<br/>$query<br/>- $result";
   
     // if (file_exists("./upload/" . $_FILES["file"]["name"]))
