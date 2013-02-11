@@ -114,6 +114,8 @@
 											if (in_array($fieldName, $column_to_skip)) {
 												    $i++; continue;
 											}
+											if ($fieldName=="photo") 
+												$item="<img src='$item'/>";
 											echo "<td>" . $item . "</td>";
 										}
 										// echo "<td>" . htmlspecialchars($row["last_name"]) . "</td>";
