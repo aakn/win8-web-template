@@ -1,26 +1,5 @@
 $(function() {
-
-	var result;
-
-	$(".edit-btn").click(function() {
-		var id = this.id;
-		$.post("../php/get-item.php",
-		{ 
-			itemid : id
-		},
-		function(data,status) {
-			//console.log(data);
-			result = JSON.parse(data); 
-			console.log(result);
-
-			$.each(result, function(key,value) {
-				$("#"+key).val(value);
-				//console.log(key+" "+value);
-			});
-		});
-
-		//$('#edit-modal').modal();
-	});
+	
 	$(".delete-btn").click(function() {
 		var id = this.id;
 		console.log(id);
@@ -29,28 +8,47 @@ $(function() {
 			itemid : id
 		},
 		function(data,status) {
-			//console.log(data);
 			if(data=="done") {
-
+				$("#rowid-"+id).hide();
 			}
 		});
 	});
+
+	var result;
+	var rowid;
+	$(".edit-btn").click(function() {
+		var id = this.id;
+		rowid = id;
+		$.post("../php/get-item.php",
+		{ 
+			itemid : id
+		},
+		function(data,status) {
+			result = JSON.parse(data); 
+			console.log(result);
+			$.each(result, function(key,value) {
+				$("#"+key).val(value);
+			});
+		});
+	});
+
 	$("#save-changes-btn").click(function () {
 		var items = new Object();
 		var i=0;
+		var trcode = "";
 		$.each(result, function(key,value) {
 			items[key] = $("#"+key).val();
-			//console.log(key+" "+value);
+			trcode = trcode + "<td>" + items[key] + "</td>";
 		});
-		//console.log(items);
+
+		trcode = trcode + "<td><button class='btn btn-inverse edit-btn' data-toggle='modal' href='#edit-modal' id='"+rowid+"' >Edit</button>"+
+									"<button class='btn btn-danger delete-btn'  id='"+rowid+"' >Delete</button>"+
+								"</td>";
 
 		$.post("../php/update-item.php", items,
 		function(data,status) {
 			$("#edit-modal").modal('hide');
-			console.log(data);
-				
+			$("#rowid-"+rowid).html(trcode);
 		});
-
-
 	});
 });

@@ -105,7 +105,8 @@
 								<?php
 									$i=0;
 									while($row = pg_fetch_row($result)) {
-										echo "<tr>";
+										$id = $row[0];
+										echo "<tr id='rowid-$id'>";
 										foreach ($row as $item) {
 											echo "<td>" . $item . "</td>";
 										}
