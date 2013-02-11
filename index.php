@@ -115,7 +115,7 @@
 												    $i++; continue;
 											}
 											if ($fieldName=="photo") 
-												$item="<img src='$item'/>";
+												$item="<img width="100" height="100" src='$item'/>";
 											echo "<td>" . $item . "</td>";
 										}
 										// echo "<td>" . htmlspecialchars($row["last_name"]) . "</td>";
