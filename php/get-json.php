@@ -10,7 +10,7 @@
 	}
 
 	if($page=="main"){
-		$rows = array_filter($rows,"mainpage");
+		$rows = get_object_vars(array_filter($rows,"mainpage"));
 	}
 	
 	echo json_encode($rows);

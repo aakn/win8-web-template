@@ -29,7 +29,7 @@
 			$subcat_id=1;
 			
 			while($subcat_id<=$items_per_sub_category) {
-				$iname = "$item $count";
+				$iname = "$itemname $count";
 				$rand = array_rand($img);
 				$photo=$img[$rand];
 				$query = "INSERT INTO ecom (category, subcategory,itemid,itemname,description,price,photo) VALUES ('$cname','$scname','$subcat_id','$iname','$description','$price','$photo');";
