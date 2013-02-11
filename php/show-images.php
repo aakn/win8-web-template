@@ -6,7 +6,7 @@
 	echo "number of rows: $num <br/>";
 	$rows=array();
 	while($row = pg_fetch_assoc($result)) {
-		$row.photo = stripslashes($row.photo);
+		// $row.photo = stripslashes($row.photo);
 
 		$image = $row.photo;
 		var_dump($image);
