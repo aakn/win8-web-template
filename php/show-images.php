@@ -9,6 +9,8 @@
 		// $row.photo = stripslashes($row.photo);
 
 		$image = $row.photo;
+		$image = stripslashes($image);
+		$row.photo=$image;
 		var_dump($image);
 		echo $image."<br/>";
 		echo "img src='$image'<br/>";
