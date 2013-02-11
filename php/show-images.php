@@ -1,6 +1,6 @@
 <?php
 	include_once('../config.ini');
-	$query = "SELECT * from photos LIMIT 10";
+	$query = "SELECT * from photos LIMIT 1";
 	$result = pg_query($db, $query);
 	$num = pg_num_rows($result);
 	echo "number of rows: $num <br/>";
