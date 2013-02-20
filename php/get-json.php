@@ -10,10 +10,10 @@
 	}
 
 	if($page=="main"){
-		$rows = array_filter($rows,"mainpage");
+		$rows = array_values(array_filter($rows,"mainpage"));
 	}
 	else if ($page="category") {
-		$rows = array_filter($rows,"subcategory");
+		$rows = array_values(array_filter($rows,"subcategory"));
 	}
 	
 	echo json_encode($rows);
