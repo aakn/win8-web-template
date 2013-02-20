@@ -11,11 +11,8 @@
 
 	if($page=="main"){
 		$rows = array_values(array_filter($rows,"mainpage"));
-		$item;
-		if(($key = array_search("Lace", $rows)) !== false) {
-			$item = $rows[$key];
-		    unset($rows[$key]);
-		}
+		$item = search($rows,"subcategory","lace");
+		array_diff($rows, $item)
 		array_push($rows, $item);
 	}
 	else if ($page="category") {
@@ -28,6 +25,7 @@
 	function mainpage($var) {
 		//print_r($var);
 		//print_r($var["itemid"]);
+		//if($var["subcategory"]=="lace") return false;
 		if($var["itemid"]==1) return true;
 		else return false;
 	}
@@ -41,5 +39,20 @@
 			return true;
 		} else
 			return false;
+	}
+	function search($array, $key, $value)
+	{
+	    $results = array();
+
+	    if (is_array($array))
+	    {
+	        if (isset($array[$key]) && $array[$key] == $value)
+	            $results[] = $array;
+
+	        foreach ($array as $subarray)
+	            $results = array_merge($results, search($subarray, $key, $value));
+	    }
+
+	    return $results;
 	}
 ?>
