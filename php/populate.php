@@ -1,5 +1,6 @@
 <?php
 	include_once("../config.ini");
+	include_once("getimages.php");
 
 	$category = "Category";
 	$subcategory = "SubCategory";

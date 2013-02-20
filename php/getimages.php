@@ -9,7 +9,7 @@
 	$img["shoes"] = getItems($rootpath.$items[2]."/");
 	$img["accesories"] = getItems($rootpath.$items[3]."/");
 	$img["fitandflare"] = getItems($rootpath.$items[4]."/");
-	//echo json_encode($img, JSON_PRETTY_PRINT);
+	echo json_encode($img, JSON_PRETTY_PRINT);
 
 	function getItems($filePath) {
 		$dir = opendir($filePath);
@@ -21,9 +21,13 @@
 		$rows = array();
 		while (sizeof($string) != 0){
 		  $img = array_pop($string);
-		  $item = getBase64($filePath.$img);
+		  $item = array();
+		  $item["name"] = substr($img,0,-4);
+		  $item["base64"] = getBase64($filePath.$img);
 		  $rows[] = $item;
 		}
+
+
 		//echo json_encode($rows, JSON_PRETTY_PRINT);
 		return $rows;
 	}
