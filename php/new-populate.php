@@ -30,7 +30,7 @@
 
 
 		//while($j<=$number_of_sub_category){
-		foreach ($subcat as $key => $value)
+		foreach ($subcat as $key => $value) {
 			$scname=$value["name"];
 			$subcat_id=1;
 
