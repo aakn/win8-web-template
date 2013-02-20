@@ -12,7 +12,7 @@
 	if($page=="main"){
 		$rows = array_values(array_filter($rows,"mainpage"));
 		$item = search($rows,"subcategory","lace");
-		array_diff($rows, $item)
+		array_diff($rows, $item);
 		array_push($rows, $item);
 	}
 	else if ($page="category") {
