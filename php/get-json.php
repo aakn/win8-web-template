@@ -11,9 +11,9 @@
 
 	if($page=="main"){
 		$rows = array_values(array_filter($rows,"mainpage"));
-		$item = search($rows,"subcategory","lace");
-		array_diff($rows, $item);
-		array_push($rows, $item[0]);
+		// $item = search($rows,"subcategory","lace");
+		// array_diff($rows, $item);
+		// array_push($rows, $item[0]);
 	}
 	else if ($page="category") {
 		$rows = array_values(array_filter($rows,"subcategory"));
