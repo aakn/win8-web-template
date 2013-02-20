@@ -1,6 +1,6 @@
 <?php
 	$string =array();
-	$rootpath = "images/";
+	$rootpath = "../images/";
 	$items=array('handbags','clothes','shoes','accesories' ,'fitandflare');
 
 	$img=array();
