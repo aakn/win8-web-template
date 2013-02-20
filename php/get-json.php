@@ -15,10 +15,6 @@
 	else if ($page="category") {
 		$rows = array_values(array_filter($rows,"subcategory"));
 
-		if(($key = array_search("Fit and Flare", $rows)) !== false) {
-		    unset($messages[$key]);
-		}
-		array_unshift($rows, "Fit and Flare");
 	}
 
 	
