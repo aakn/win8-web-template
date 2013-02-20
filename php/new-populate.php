@@ -42,7 +42,7 @@
 					$photo=$value["base64"];
 					$query = "INSERT INTO ecom (category, subcategory,itemid,itemname,description,price,photo) VALUES ('$cname','$scname','$subcat_id','$iname','$description','$price','$photo');";
 					$result = pg_query($db, $query);
-					//echo "$query<br/>";
+					echo "$query<br/>";
 					//echo $result;
 					$count++;
 					$subcat_id++;
