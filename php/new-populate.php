@@ -36,7 +36,7 @@
 
 			if($cname == "Clothes" && $scname == "Fit and Flare") {
 				foreach($fitandflare as $key => $value) {
-					$iname = $value["name"];
+					$iname = pg_escape_string($value["name"]);
 					$rand = rand(100,1000);
 					$price = "\$".$rand;
 					$photo=$value["base64"];
@@ -48,7 +48,7 @@
 					$subcat_id++;
 				}
 
-				break;
+				continue;
 			}
 
 			
