@@ -3,6 +3,8 @@
 	$page = $_GET["page"];
 	$query = "SELECT * from $tname";
 
+		
+
 	$result = pg_query($db, $query);
 	$rows=array();
 	while($row = pg_fetch_assoc($result)) {
@@ -16,6 +18,10 @@
 		// array_push($rows, $item[0]);
 	}
 	else if ($page="category") {
+		$upperlimit = $_GET["ulimit"];
+		$lowerlimit = $_GET["llimit"];
+		$difference = $upperlimit-$lowerlimit;
+		$currentcount = 0;
 		$rows = array_values(array_filter($rows,"subcategory"));
 	}
 
@@ -32,10 +38,10 @@
 	function subcategory($var) {
 		$subcategory = $_GET["sub"];
 		$category = $_GET["cat"];
-		$upperlimit = $_GET["ulimit"];
-		$lowerlimit = $_GET["llimit"];
+		global $currentcount, $difference, $lowerlimit;
 
-		if($var["category"] == $category && $var["subcategory"] == $subcategory && $var["itemid"] <= $upperlimit && $var["itemid"] >= $lowerlimit) {
+		if($var["category"] == $category && $currentcount<=$difference && $var["itemid"] >= $lowerlimit) {
+			$currentcount++;
 			return true;
 		} else
 			return false;
