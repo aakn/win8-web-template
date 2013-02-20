@@ -4,12 +4,12 @@
 	$items=array('handbags','clothes','shoes','accesories' ,'fitandflare');
 
 	$img=array();
-	$img["handbags"] = getItems($rootpath.$items[0]."/");
-	$img["clothes"] = getItems($rootpath.$items[1]."/");
-	$img["shoes"] = getItems($rootpath.$items[2]."/");
-	$img["accesories"] = getItems($rootpath.$items[3]."/");
-	$img["fitandflare"] = getItems($rootpath.$items[4]."/");
-	echo json_encode($img, JSON_PRETTY_PRINT);
+	$img["Handbags"] = getItems($rootpath.$items[0]."/");
+	$img["Clothes"] = getItems($rootpath.$items[1]."/");
+	$img["Shoes"] = getItems($rootpath.$items[2]."/");
+	$img["Accessories"] = getItems($rootpath.$items[3]."/");
+	$fitandflare = getItems($rootpath.$items[4]."/");
+	//echo json_encode($img, JSON_PRETTY_PRINT);
 
 	function getItems($filePath) {
 		$dir = opendir($filePath);
