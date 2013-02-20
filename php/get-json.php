@@ -11,10 +11,15 @@
 
 	if($page=="main"){
 		$rows = array_values(array_filter($rows,"mainpage"));
+		$item;
+		if(($key = array_search("Lace", $rows)) !== false) {
+			$item = $rows[$key];
+		    unset($rows[$key]);
+		}
+		array_push($rows, $item);
 	}
 	else if ($page="category") {
 		$rows = array_values(array_filter($rows,"subcategory"));
-
 	}
 
 	
