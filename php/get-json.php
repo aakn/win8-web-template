@@ -15,6 +15,7 @@
 		if(($key = array_search("Lace", $rows)) !== false) {
 			$item = $rows[$key];
 		    unset($rows[$key]);
+		    echo "here";
 		}
 		array_push($rows, $item);
 	}
