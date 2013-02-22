@@ -20,6 +20,11 @@
 	else if ($page="category") {
 		$upperlimit = $_GET["ulimit"];
 		$lowerlimit = $_GET["llimit"];
+		$subcategory = $_GET["sub"]; 
+		$category = $_GET["cat"];
+		
+		if($subcategory == "Fit and Flare") $upperlimit = $upperlimit + 3;
+
 		$difference = $upperlimit-$lowerlimit;
 		$currentcount = 0;
 		$rows = array_values(array_filter($rows,"subcategory"));
@@ -36,9 +41,7 @@
 		else return false;
 	}
 	function subcategory($var) {
-		$subcategory = $_GET["sub"]; 
-		$category = $_GET["cat"];
-		global $currentcount, $difference, $upperlimit, $lowerlimit;
+		global $currentcount, $difference, $upperlimit, $lowerlimit, $subcategory, $category;
 
 		if($var["category"] == $category && $var["subcategory"] == $subcategory && $var["itemid"] <= $upperlimit && $var["itemid"] >= $lowerlimit) {
 			$currentcount++;
