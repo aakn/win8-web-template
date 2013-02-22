@@ -38,9 +38,9 @@
 	function subcategory($var) {
 		$subcategory = $_GET["sub"];
 		$category = $_GET["cat"];
-		global $currentcount, $difference;
+		global $currentcount, $difference, $upperlimit, $lowerlimit;
 
-		if($var["category"] == $category && $var["subcategory"] == $subcategory && $currentcount<=$difference && $var["itemid"] >= $lowerlimit) {
+		if($var["category"] == $category && $var["subcategory"] == $subcategory && $var["itemid"] <= $upperlimit && $var["itemid"] >= $lowerlimit) {
 			$currentcount++;
 			return true;
 		} else
