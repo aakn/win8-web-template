@@ -36,7 +36,7 @@
 		else return false;
 	}
 	function subcategory($var) {
-		$subcategory = $_GET["sub"];
+		$subcategory = $_GET["sub"]; 
 		$category = $_GET["cat"];
 		global $currentcount, $difference, $upperlimit, $lowerlimit;
 
