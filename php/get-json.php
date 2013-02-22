@@ -23,7 +23,7 @@
 		$subcategory = $_GET["sub"]; 
 		$category = $_GET["cat"];
 		
-		if($subcategory == "Fit and Flare") $upperlimit = $upperlimit + 3;
+		if($subcategory == "Fit and Flare") $upperlimit = $upperlimit + 4;
 
 		$difference = $upperlimit-$lowerlimit;
 		$currentcount = 0;
