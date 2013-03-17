@@ -40,17 +40,6 @@ if (
   $result = pg_query($db, $query);
   echo "Result of the query :<br/>$query<br/>- $result";
   
-    // if (file_exists("./upload/" . $_FILES["file"]["name"]))
-    //   {
-    //   echo $_FILES["file"]["name"] . " already exists. ";
-    //   }
-    // else
-    //   {
-    //   echo move_uploaded_file($_FILES["file"]["tmp_name"],
-    //   "./upload/" . $_FILES["file"]["name"]);
-    //   echo "Stored in: " . "./upload/" . $_FILES["file"]["name"];
-    //   }
-      }
   }
 else
   {

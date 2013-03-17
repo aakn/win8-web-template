@@ -40,7 +40,7 @@
 					$rand = rand(100,1000);
 					$price = "\$".$rand;
 					$photo=$value["base64"];
-					$query = "INSERT INTO ecom (category, subcategory,itemid,itemname,description,price,photo) VALUES ('$cname','$scname','$subcat_id','$iname','$description','$price','$photo');";
+					$query = "INSERT INTO $tname (category, subcategory,itemid,itemname,description,price,photo) VALUES ('$cname','$scname','$subcat_id','$iname','$description','$price','$photo');";
 					$result = pg_query($db, $query);
 					echo "$query<br/>";
 					//echo $result;
@@ -57,7 +57,7 @@
 				$rand = rand(100,1000);
 				$price = "\$".$rand;
 				$photo=$value["base64"];
-				$query = "INSERT INTO ecom (category, subcategory,itemid,itemname,description,price,photo) VALUES ('$cname','$scname','$subcat_id','$iname','$description','$price','$photo');";
+				$query = "INSERT INTO $tname (category, subcategory,itemid,itemname,description,price,photo) VALUES ('$cname','$scname','$subcat_id','$iname','$description','$price','$photo');";
 				$result = pg_query($db, $query);
 				//echo "$query<br/>";
 				//echo $result;

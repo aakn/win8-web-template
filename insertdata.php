@@ -75,7 +75,7 @@
 									<?php
 									
 										include_once('config.ini');
-										$result = pg_query($db, "select * from template limit 1");
+										$result = pg_query($db, "select * from $tname limit 1");
 										$i = 1;
 										$field_name_row = array();
 										$field_value_row = array();

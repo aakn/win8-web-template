@@ -75,7 +75,7 @@
 										<legend>Fill this form</legend>
 										<?php
 											include_once('config.ini');
-											$result = pg_query($db, "select * from template limit 1");
+											$result = pg_query($db, "select * from $tname limit 1");
 											$i = 1;
 											while($i < pg_num_fields($result)) 
 											{

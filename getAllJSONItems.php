@@ -1,6 +1,6 @@
 <?php
 	include_once('config.ini');
-	$query = "SELECT * from template";
+	$query = "SELECT * from $tname";
 
 	$result = pg_query($db, $query);
 	$rows=array();

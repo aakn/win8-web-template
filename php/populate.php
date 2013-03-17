@@ -1,6 +1,6 @@
 <?php
 	include_once("../config.ini");
-	include_once("getimages.php");
+	//include_once("getimages.php");
 
 	$category = "Category";
 	$subcategory = "SubCategory";
@@ -33,7 +33,7 @@
 				$iname = "$itemname $count";
 				$rand = array_rand($img);
 				$photo=$img[$rand];
-				$query = "INSERT INTO ecom (category, subcategory,itemid,itemname,description,price,photo) VALUES ('$cname','$scname','$subcat_id','$iname','$description','$price','$photo');";
+				$query = "INSERT INTO $tname (category, subcategory,itemid,itemname,description,price,photo) VALUES ('$cname','$scname','$subcat_id','$iname','$description','$price','$photo');";
 				$result = pg_query($db, $query);
 				//echo "$query<br/>";
 				echo $result;

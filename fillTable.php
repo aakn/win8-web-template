@@ -11,7 +11,7 @@
 		while($j<10){
 			$item2="subitem$j";
 
-			$query = "INSERT INTO template (item1, item2,item3,item4) VALUES ('$item1','$item2','$item3','$item4');";
+			$query = "INSERT INTO $tname (item1, item2,item3,item4) VALUES ('$item1','$item2','$item3','$item4');";
 			$result = pg_query($db, $query);
 			echo "$query<br/>";
 			$j++;

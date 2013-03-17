@@ -17,7 +17,7 @@
 		// array_diff($rows, $item);
 		// array_push($rows, $item[0]);
 	}
-	else if ($page="category") {
+	else if ($page=="category") {
 		$upperlimit = $_GET["ulimit"];
 		$lowerlimit = $_GET["llimit"];
 		$subcategory = $_GET["sub"]; 

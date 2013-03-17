@@ -1,6 +1,6 @@
 <?php
 	include_once('config.ini');
-	$result = pg_query($db, "select * from employees limit 1");
+	$result = pg_query($db, "select * from $tname limit 1");
 	$i = 1;
 	$field_name_row = array();
 	$field_value_row = array();
@@ -16,7 +16,7 @@
 		$i++;
 	}
 
-	$query = "insert into employees (".implode(",",$field_name_row).") values (".implode(",",$field_value_row).")";
+	$query = "insert into $tname (".implode(",",$field_name_row).") values (".implode(",",$field_value_row).")";
 	pg_query = ($db, $query);
 	echo "inserted successfully";
 ?>
